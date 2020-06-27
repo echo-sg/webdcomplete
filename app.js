@@ -45,7 +45,7 @@ function auth (req, res, next) {
       res.setHeader('WWW-Authenticate', 'Basic');
       err.status = 401;
       next(err);
-      return;
+      return; 
   }
 
   var auth = new Buffer.from(authHeader.split(' ')[1], 'base64').toString().split(':');
